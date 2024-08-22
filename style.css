@@ -1,0 +1,227 @@
+/* Importa fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Define variables de CSS que se pueden reutilizar en todo el documento */
+:root{
+    --font-inter: "Inter", sans-serif; /* Define la fuente principal */
+    --color-primario: #f3f5fc; /* Color de fondo principal */
+    --color-secundario: #0a3871; /* Color de texto y borde principal */
+    --color-terciario: #d8dfe8; /* Color de fondo secundario */
+}
+
+/* Estilo base para todo el documento */
+html{
+    font-size: 62.5%; /* Establece el tamaño base de fuente en 10px (62.5% de 16px), facilitando el uso de rems */
+}
+
+/* Estilos globales para el cuerpo del documento */
+body{
+    background-color: var(--color-primario); /* Usa la variable para el color de fondo */
+    font-family: var(--font-inter); /* Aplica la fuente definida en la raíz */
+}
+
+/* Estilos para el encabezado */
+header{
+    margin-bottom: 5rem; /* Espacio inferior de 5rem */
+    width: 60%; /* Ancho del 60% del contenedor padre */
+}
+
+/* Estilos para el elemento principal */
+main{
+    display: flex; /* Usa flexbox para alinear elementos hijos */
+    justify-content: space-around; /* Distribuye el espacio de manera uniforme entre los elementos */
+}
+
+/* Estilos para la imagen dentro del header */
+header img{
+    width: 120px; /* Ancho de la imagen */
+    height: 48px; /* Alto de la imagen */
+}
+
+/* Estilos para la sección del formulario */
+.form__section{
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    height: 70dvh; /* Altura dinámica de 70% del viewport */
+}
+
+/* Estilos para el input del formulario */
+.form__input{
+    width: 100%; /* Ancho total */
+    max-width: 577px; /* Ancho máximo */
+    height: 65dvh; /* Altura dinámica */
+    border-color: transparent; /* Bordes transparentes */
+    outline: none; /* Sin contorno al enfoque */
+    background: transparent; /* Fondo transparente */
+    font-family: var(--font-inter); /* Aplica la fuente principal */
+    font-size: 3.2rem; /* Tamaño de fuente */
+    color: var(--color-secundario); /* Color del texto */
+    margin-bottom: 3rem; /* Espacio inferior */
+    overflow: auto; /* Habilita el desplazamiento si el contenido es mayor */
+}
+
+/* Estilos para el placeholder dentro del input */
+::placeholder{
+    font-size: 3.2rem; /* Tamaño de fuente del placeholder */
+    color: var(--color-secundario); /* Color del texto del placeholder */
+    font-family: var(--font-inter); /* Aplica la fuente principal */
+}
+
+/* Estilos para la alerta */
+.aviso__alerta{
+    display: flex; /* Usa flexbox para alinear elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 1rem; /* Espacio entre elementos */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+/* Contenedor de botones de envío */
+.sumit_container{
+    display: flex; /* Usa flexbox */
+    gap: 2rem; /* Espacio entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+}
+
+/* Estilos para el botón de encriptar */
+.btn_encriptar{
+    background: var(--color-secundario); /* Fondo con color secundario */
+    color: white; /* Texto en blanco */
+    font-size: 1.6rem; /* Tamaño de fuente */
+    padding: 1rem 2rems; /* Espaciado interno */
+    border-radius: 24px; /* Bordes redondeados */
+    width: 328px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    border: 1px solid var(--color-secundario); /* Borde del color secundario */
+}
+
+/* Estilos para el botón de desencriptar */
+.btn_desencriptar{
+    background: transparent; /* Fondo transparente */
+    color: var(--color-secundario); /* Texto con color secundario */
+    font-size: 1.6rem; /* Tamaño de fuente */
+    padding: 1rem 2rems; /* Espaciado interno */
+    border-radius: 24px; /* Bordes redondeados */
+    width: 328px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    border: 1px solid var(--color-secundario); /* Borde del color secundario */
+}
+
+/* Estilos para el contenedor de resultados */
+.result{
+    background: white; /* Fondo blanco */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Alinea horizontalmente al centro */
+    justify-content: center; /* Alinea verticalmente al centro */
+    gap: 10rem; /* Espacio entre elementos */
+    height: 80dvh; /* Altura dinámica */
+    border-radius: 32px; /* Bordes redondeados */
+    max-width: 40rem; /* Ancho máximo */
+    width: 100%; /* Ancho total */
+}
+
+/* Estilos para la imagen dentro de los resultados */
+.result__img{
+    display: block; /* Muestra la imagen como un bloque */
+}
+
+/* Clase para ocultar elementos */
+.hidden{
+    display: none; /* Oculta el elemento */
+}
+
+/* Estilos para el botón de copiar */
+.botonCopiar{
+    background: transparent; /* Fondo transparente */
+    color: var(--color-secundario); /* Texto con color secundario */
+    font-size: 1.6rem; /* Tamaño de fuente */
+    padding: 1rem 2rems; /* Espaciado interno */
+    border-radius: 24px; /* Bordes redondeados */
+    width: 328px; /* Ancho del botón */
+    height: 67px; /* Altura del botón */
+    border: 1px solid var(--color-secundario); /* Borde del color secundario */
+}
+
+/* Estilos para el pie de página */
+.footer{
+    background-color: transparent; /* Fondo transparente */
+    padding: 24px; /* Espaciado interno */
+    color: var(--color-secundario); /* Texto con color secundario */
+    text-align: center; /* Texto centrado */
+    font-family: var(--fuente-inter); /* Aplica la fuente principal */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: 400; /* Grosor de la fuente */
+}
+
+/* Estilos para enlaces de presentación */
+.presentacio__enlaces{
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Distribuye los elementos */
+    flex-direction: row; /* Coloca los elementos en fila */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 32px; /* Espacio entre elementos */
+}
+
+/* Estilos para los enlaces de presentación */
+.presentacion_enlaces{
+    width: 160px; /* Ancho del enlace */
+    color: var(--color-secundario); /* Texto con color secundario */
+    text-align: center; /* Texto centrado */
+    padding: 21.5px 0; /* Espaciado interno */
+    border-radius: 8%; /* Bordes redondeados */
+    font-family: var(--font-inter); /* Aplica la fuente principal */
+    text-decoration: none; /* Sin subrayado */
+    border: 2px solid var(--color-secundario); /* Borde del color secundario */
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Alinea horizontalmente al centro */
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    }
+    .sumit_container{
+        justify-content: center; /* Centra los elementos */
+    }
+    .result{
+        height: auto; /* Altura automática */
+        max-width: 624px; /* Ancho máximo */
+        margin-top: 2rem; /* Espacio superior */
+        min-height: 186px; /* Altura mínima */
+    }
+    .result__img{
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+    header img{
+        width: 73px; /* Ajusta el tamaño de la imagen */
+    }
+}
+
+/* Estilos para el loader */
+.loader {
+    width: 12px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    clip-path: inset(-220%);
+    animation: l28 2s infinite linear;
+  }
+  @keyframes l28 {
+    0%  {box-shadow:0 0 0 0   , 40px 0,-40px 0,0 40px,0 -40px}
+    10% {box-shadow:0 0 0 0   , 12px 0,-40px 0,0 40px,0 -40px}
+    20% {box-shadow:0 0 0 4px , 0px  0,-40px 0,0 40px,0 -40px}
+    30% {box-shadow:0 0 0 4px , 0px  0,-12px 0,0 40px,0 -40px}
+    40% {box-shadow:0 0 0 8px , 0px  0,  0px 0,0 40px,0 -40px}
+    50% {box-shadow:0 0 0 8px , 0px  0,  0px 0,0 12px,0 -40px}
+    60% {box-shadow:0 0 0 12px, 0px  0,  0px 0,0  0px,0 -40px}
+    70% {box-shadow:0 0 0 12px, 0px  0,  0px 0,0  0px,0 -12px}
+    80% {box-shadow:0 0 0 16px, 0px  0,  0px 0,0  0px,0  0px }
+    90%,
+    100%{box-shadow:0 0 0 0   , 40px 0,-40px 0,0 40px,0 -40px}
+  }
+
+  
